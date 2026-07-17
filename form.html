@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css" />
+    <script>
+      function login() {
+        let name = document.getElementById("name").value;
+        let gender = document.querySelector('input[name="gender"]:checked').value;
+        let email = document.getElementById("email").value;
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+        console.log(name, gender, email, username, password);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <table>
+          <tr>
+            <td>Name</td>
+            <td>
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Gender</td>
+            <td>
+              <input type="radio" name="gender" value="Male" required /> Male
+              <input type="radio" name="gender" value="Female" required />
+              Female
+            </td>
+          </tr>
+
+          <tr>
+            <td>Email</td>
+            <td>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Username</td>
+            <td>
+              <input
+                type="text"
+                id="username"
+                placeholder="Enter username"
+                required
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Password</td>
+            <td>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter password"
+                required
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+              <button type="submit" onclick="login()">Submit</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
