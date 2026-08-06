@@ -1,7 +1,6 @@
 //import {products} from '../data/products';
 import { useEffect, useMemo, useState } from 'react';
 import Ratings from './Ratings';
-import { NavLink } from 'react-router-dom';
  
 const ProductsList = () => {
     const [products, setProducts] = useState<any[]>([]);
@@ -94,9 +93,9 @@ const ProductsList = () => {
                                     </td>
  
                                     <td className="fw-semibold">
-                                        <NavLink to={`/products/${product.id}`}>
+                                        <a href={`/products/${product.id}`}>
                                             {product.name}
-                                        </NavLink>
+                                        </a>
                                     </td>
  
                                     <td className="text-muted">

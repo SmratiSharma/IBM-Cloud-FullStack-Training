@@ -1,12 +1,11 @@
 import {Document, ObjectId} from 'mongoose';
- 
 export default interface IProduct extends Document{
-    id : ObjectId;
+    id: ObjectId;
     name: string;
-    description: string;    
+    description: string;
     price: number;
-    productCode : string;
-    rating : number;
+    productCode: string;
+    rating: number;
     imageUrl : string;
     productAvailable: string;
 }

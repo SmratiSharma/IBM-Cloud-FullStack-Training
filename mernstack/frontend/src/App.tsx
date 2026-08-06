@@ -1,17 +1,30 @@
-import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from './assets/vite.svg'
-// import heroImg from './assets/hero.png'
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import ProductList from './components/productsList'
+import ProductsList from './components/productsList'
+import AppLayout from './components/AppLayout'
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
-    <>
-      <ProductList/>
-    </>
+    <BrowserRouter>
+    <Routes>
+      <Route element={<AppLayout />} >
+        <Route path="/products" element={<ProductsList />} />
+        
+  <Route path="/products/:id" element={<div>Product Details Page</div>} />
+        <Route path="/about" element={<div>About Page</div>} />
+        <Route path="/help" element={<div>Help Page</div>} />
+        <Route path="/cart" element={<div>Cart Page</div>} />
+      </Route>
+      
+      
+    </Routes>
+    </BrowserRouter>
+
+     
+    
   )
 }
 
