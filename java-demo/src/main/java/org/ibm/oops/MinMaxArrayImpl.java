@@ -17,7 +17,6 @@ public class MinMaxArrayImpl<T extends Comparable<T>> implements MinMaxArray<T> 
         }
         return max;
     }
-    
 
     @Override
     public T findMin() {
